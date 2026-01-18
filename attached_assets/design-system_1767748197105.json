@@ -1,0 +1,891 @@
+{
+  "metadata": {
+    "description": "Design system completo moderno e profissional de altissimo nível para um padrão 'Enterprise/SaaS' moderno (semelhante a plataformas como Stripe ou Vercel) para dashboard SaaS/Enterprise com suporte a dark/light",
+    "framework": "React + TypeScript + Tailwind CSS",
+    "iconLibrary": "Lucide React",
+  },
+  "colors": {
+    "brand": {
+      "yellow": {
+        "value": "#facc15",
+        "tailwind": "brand-yellow",
+        "rgb": "250, 204, 21",
+        "usage": "Cor primária, destaque, elementos ativos, CTAs principais"
+      },
+      "yellowGlow": {
+        "value": "#ffcd38",
+        "css": "shadow-[0_0_8px_#ffcd38]",
+        "usage": "Glow effect para indicador ativo na sidebar"
+      },
+      "accent": {
+        "value": "#3b82f6",
+        "tailwind": "brand-accent",
+        "usage": "Cor secundária para gráficos (posts), links"
+      }
+    },
+    "dark": {
+      "900": {
+        "value": "#09090b",
+        "tailwind": "dark-900",
+        "usage": "Background principal do body, containers de tabela"
+      },
+      "800": {
+        "value": "#18181b",
+        "tailwind": "dark-800",
+        "usage": "Background de cards, sidebar, header, tabs container"
+      },
+      "700": {
+        "value": "#27272a",
+        "tailwind": "dark-700",
+        "usage": "Bordas principais, backgrounds de hover, separadores"
+      },
+      "600": {
+        "value": "#3f3f46",
+        "tailwind": "dark-600",
+        "usage": "Bordas de hover, elementos terciários, borda de avatar"
+      }
+    },
+    "light": {
+      "background": {
+        "value": "#f9fafb",
+        "tailwind": "gray-50",
+        "usage": "Background principal do body (light mode)"
+      },
+      "surface": {
+        "value": "#ffffff",
+        "tailwind": "white",
+        "usage": "Background de cards e superfícies"
+      },
+      "surfaceSecondary": {
+        "value": "#f3f4f6",
+        "tailwind": "gray-100",
+        "usage": "Background de inputs, botões secundários, tabs"
+      },
+      "border": {
+        "value": "#e5e7eb",
+        "tailwind": "gray-200",
+        "usage": "Bordas padrão"
+      },
+      "borderHover": {
+        "value": "#d1d5db",
+        "tailwind": "gray-300",
+        "usage": "Bordas em estado hover, borda de avatar"
+      }
+    },
+    "amber": {
+      "50": {
+        "value": "#fffbeb",
+        "tailwind": "amber-50",
+        "usage": "Background de item ativo (light mode)"
+      },
+      "500": {
+        "value": "#f59e0b",
+        "tailwind": "amber-500",
+        "usage": "Indicador ativo, focus ring (light mode)"
+      },
+      "600": {
+        "value": "#d97706",
+        "tailwind": "amber-600",
+        "usage": "Texto de item ativo, breadcrumb (light mode)"
+      }
+    },
+    "text": {
+      "dark": {
+        "primary": {
+          "value": "#ffffff",
+          "tailwind": "text-white"
+        },
+        "secondary": {
+          "value": "#a1a1aa",
+          "tailwind": "text-gray-400"
+        },
+        "tertiary": {
+          "value": "#71717a",
+          "tailwind": "text-gray-500"
+        },
+        "muted": {
+          "value": "#52525b",
+          "tailwind": "text-gray-600"
+        },
+        "placeholder": {
+          "value": "#71717a",
+          "tailwind": "placeholder-gray-500"
+        }
+      },
+      "light": {
+        "primary": {
+          "value": "#111827",
+          "tailwind": "text-gray-900"
+        },
+        "secondary": {
+          "value": "#4b5563",
+          "tailwind": "text-gray-600"
+        },
+        "tertiary": {
+          "value": "#6b7280",
+          "tailwind": "text-gray-500"
+        },
+        "muted": {
+          "value": "#9ca3af",
+          "tailwind": "text-gray-400"
+        },
+        "placeholder": {
+          "value": "#9ca3af",
+          "tailwind": "placeholder-gray-400"
+        }
+      }
+    },
+    "status": {
+      "success": {
+        "hex": "#22c55e",
+        "bg": "bg-green-500/10",
+        "border": "border-green-500/40",
+        "text": "text-green-400",
+        "usage": "Status ACTIVE, sucesso, online"
+      },
+      "warning": {
+        "hex": "#f97316",
+        "bg": "bg-orange-500/10",
+        "border": "border-orange-500/40",
+        "text": "text-orange-400",
+        "usage": "Status PAUSED, pendente, atenção"
+      },
+      "error": {
+        "hex": "#ef4444",
+        "bg": "bg-red-500/10",
+        "border": "border-red-500/40",
+        "text": "text-red-400",
+        "usage": "Status INACTIVE, falha, erro"
+      },
+      "info": {
+        "hex": "#3b82f6",
+        "bg": "bg-blue-500/10",
+        "border": "border-blue-500/40",
+        "text": "text-blue-400",
+        "usage": "Informação, progresso, posts"
+      },
+      "processing": {
+        "hex": "#a855f7",
+        "bg": "bg-purple-500/10",
+        "border": "border-purple-500/40",
+        "text": "text-purple-400",
+        "usage": "Status em processamento"
+      }
+    },
+    "chart": {
+      "stories": {
+        "value": "#facc15",
+        "tailwind": "bg-brand-yellow"
+      },
+      "posts": {
+        "value": "#3b82f6",
+        "tailwind": "bg-blue-500"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "sans": {
+        "value": [
+          "Plus Jakarta Sans",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif"
+        ],
+        "googleFonts": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap",
+        "css": "font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif"
+      },
+      "mono": {
+        "value": [
+          "JetBrains Mono",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "monospace"
+        ],
+        "googleFonts": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap",
+        "css": "font-family: 'JetBrains Mono', ui-monospace, monospace"
+      }
+    },
+    "fontWeight": {
+      "normal": {
+        "value": 400,
+        "tailwind": "font-normal"
+      },
+      "medium": {
+        "value": 500,
+        "tailwind": "font-medium"
+      },
+      "semibold": {
+        "value": 600,
+        "tailwind": "font-semibold"
+      },
+      "bold": {
+        "value": 700,
+        "tailwind": "font-bold"
+      }
+    },
+    "fontSize": {
+      "xs": {
+        "value": "0.75rem",
+        "px": "12px",
+        "tailwind": "text-xs",
+        "usage": "Labels, badges, subtexts"
+      },
+      "sm": {
+        "value": "0.875rem",
+        "px": "14px",
+        "tailwind": "text-sm",
+        "usage": "Body text, inputs, buttons"
+      },
+      "base": {
+        "value": "1rem",
+        "px": "16px",
+        "tailwind": "text-base",
+        "usage": "Parágrafo padrão"
+      },
+      "lg": {
+        "value": "1.125rem",
+        "px": "18px",
+        "tailwind": "text-lg",
+        "usage": "Valores de métricas mobile"
+      },
+      "xl": {
+        "value": "1.25rem",
+        "px": "20px",
+        "tailwind": "text-xl",
+        "usage": "Títulos médios, logo"
+      },
+      "2xl": {
+        "value": "1.5rem",
+        "px": "24px",
+        "tailwind": "text-2xl",
+        "usage": "Valores grandes de métricas desktop"
+      },
+      "custom": {
+        "9px": {
+          "tailwind": "text-[9px]",
+          "usage": "Micro badges de status"
+        },
+        "10px": {
+          "tailwind": "text-[10px]",
+          "usage": "Microcopy, labels muito pequenos"
+        },
+        "11px": {
+          "tailwind": "text-[11px]",
+          "usage": "Tags, badges compactos"
+        },
+        "13px": {
+          "tailwind": "text-[13px]",
+          "usage": "Texto de cards, nomes"
+        }
+      }
+    },
+    "letterSpacing": {
+      "tighter": {
+        "value": "-0.04em",
+        "tailwind": "tracking-tighter"
+      },
+      "tight": {
+        "value": "-0.02em",
+        "tailwind": "tracking-tight",
+        "usage": "Texto principal, títulos"
+      },
+      "normal": {
+        "value": "-0.01em",
+        "tailwind": "tracking-normal"
+      },
+      "wide": {
+        "value": "0.02em",
+        "tailwind": "tracking-wide",
+        "usage": "Badges de status"
+      },
+      "wider": {
+        "value": "0.05em",
+        "tailwind": "tracking-wider",
+        "usage": "Labels uppercase"
+      }
+    },
+    "lineHeight": {
+      "tight": {
+        "tailwind": "leading-tight",
+        "usage": "Títulos, valores de métricas"
+      },
+      "normal": {
+        "tailwind": "leading-normal"
+      },
+      "relaxed": {
+        "tailwind": "leading-relaxed"
+      }
+    }
+  },
+  "spacing": {
+    "scale": {
+      "0.5": {
+        "value": "0.125rem",
+        "px": "2px",
+        "tailwind": "0.5"
+      },
+      "1": {
+        "value": "0.25rem",
+        "px": "4px",
+        "tailwind": "1"
+      },
+      "1.5": {
+        "value": "0.375rem",
+        "px": "6px",
+        "tailwind": "1.5"
+      },
+      "2": {
+        "value": "0.5rem",
+        "px": "8px",
+        "tailwind": "2"
+      },
+      "2.5": {
+        "value": "0.625rem",
+        "px": "10px",
+        "tailwind": "2.5"
+      },
+      "3": {
+        "value": "0.75rem",
+        "px": "12px",
+        "tailwind": "3"
+      },
+      "3.5": {
+        "value": "0.875rem",
+        "px": "14px",
+        "tailwind": "3.5"
+      },
+      "4": {
+        "value": "1rem",
+        "px": "16px",
+        "tailwind": "4"
+      },
+      "5": {
+        "value": "1.25rem",
+        "px": "20px",
+        "tailwind": "5"
+      },
+      "6": {
+        "value": "1.5rem",
+        "px": "24px",
+        "tailwind": "6"
+      },
+      "8": {
+        "value": "2rem",
+        "px": "32px",
+        "tailwind": "8"
+      }
+    },
+    "padding": {
+      "xs": {
+        "tailwind": "p-1",
+        "usage": "Tabs container"
+      },
+      "sm": {
+        "tailwind": "p-2",
+        "usage": "Botões de ícone mobile"
+      },
+      "md": {
+        "tailwind": "p-3",
+        "usage": "Itens de menu, cards compactos"
+      },
+      "lg": {
+        "tailwind": "p-4",
+        "usage": "Cards, containers"
+      },
+      "xl": {
+        "tailwind": "p-5",
+        "usage": "Cards maiores"
+      },
+      "2xl": {
+        "tailwind": "p-6",
+        "usage": "Containers de seção"
+      },
+      "3xl": {
+        "tailwind": "p-8",
+        "usage": "Padding de navegação"
+      }
+    },
+    "paddingX": {
+      "xs": {
+        "tailwind": "px-2",
+        "usage": "Badges pequenos"
+      },
+      "sm": {
+        "tailwind": "px-2.5",
+        "usage": "Badges"
+      },
+      "md": {
+        "tailwind": "px-3",
+        "usage": "Inputs, tabs"
+      },
+      "lg": {
+        "tailwind": "px-4",
+        "usage": "Botões, cards mobile"
+      },
+      "xl": {
+        "tailwind": "px-6",
+        "usage": "Cards, header sidebar"
+      },
+      "2xl": {
+        "tailwind": "px-8",
+        "usage": "Container principal desktop"
+      }
+    },
+    "paddingY": {
+      "xs": {
+        "tailwind": "py-1",
+        "usage": "Badges"
+      },
+      "sm": {
+        "tailwind": "py-1.5",
+        "usage": "Tabs"
+      },
+      "md": {
+        "tailwind": "py-2",
+        "usage": "Inputs"
+      },
+      "lg": {
+        "tailwind": "py-3",
+        "usage": "Cards header"
+      },
+      "xl": {
+        "tailwind": "py-4",
+        "usage": "Cards body"
+      },
+      "2xl": {
+        "tailwind": "py-8",
+        "usage": "Navegação sidebar"
+      }
+    },
+    "gap": {
+      "xs": {
+        "tailwind": "gap-1.5",
+        "usage": "Badges com ícone"
+      },
+      "sm": {
+        "tailwind": "gap-2",
+        "usage": "Itens de menu"
+      },
+      "md": {
+        "tailwind": "gap-2.5",
+        "usage": "Cards header items"
+      },
+      "lg": {
+        "tailwind": "gap-3",
+        "usage": "Breadcrumb, ações header"
+      },
+      "xl": {
+        "tailwind": "gap-4",
+        "usage": "Grid cards mobile"
+      },
+      "2xl": {
+        "tailwind": "gap-5",
+        "usage": "Grid cards"
+      },
+      "3xl": {
+        "tailwind": "gap-6",
+        "usage": "Grid cards desktop"
+      }
+    },
+    "containerPadding": {
+      "mobile": {
+        "tailwind": "px-4",
+        "value": "16px"
+      },
+      "tablet": {
+        "tailwind": "sm:px-6",
+        "value": "24px"
+      },
+      "desktop": {
+        "tailwind": "lg:px-8",
+        "value": "32px"
+      }
+    },
+    "contentPadding": {
+      "mobile": {
+        "tailwind": "p-4"
+      },
+      "tablet": {
+        "tailwind": "sm:p-6"
+      },
+      "desktop": {
+        "tailwind": "lg:p-8"
+      }
+    }
+  },
+  "borders": {
+    "radius": {
+      "sm": {
+        "value": "0.375rem",
+        "px": "6px",
+        "tailwind": "rounded-md",
+        "usage": "Badges, toggle buttons"
+      },
+      "md": {
+        "value": "0.5rem",
+        "px": "8px",
+        "tailwind": "rounded-lg",
+        "usage": "Inputs, botões, tabs"
+      },
+      "lg": {
+        "value": "0.75rem",
+        "px": "12px",
+        "tailwind": "rounded-xl",
+        "usage": "Cards, containers principais"
+      },
+      "full": {
+        "value": "9999px",
+        "tailwind": "rounded-full",
+        "usage": "Avatares, pills, badges circulares"
+      }
+    },
+    "width": {
+      "default": {
+        "value": "1px",
+        "tailwind": "border"
+      },
+      "thick": {
+        "value": "2px",
+        "tailwind": "border-2",
+        "usage": "Bordas de avatar"
+      }
+    }
+  },
+  "effects": {
+    "backdrop": {
+      "blur": {
+        "sm": {
+          "tailwind": "backdrop-blur-sm",
+          "usage": "Overlays leves"
+        },
+        "md": {
+          "tailwind": "backdrop-blur-md",
+          "usage": "Cards, sidebar, header (padrão)"
+        }
+      }
+    },
+    "shadow": {
+      "sm": {
+        "tailwind": "shadow-sm",
+        "usage": "Cards light mode, tabs ativas"
+      },
+      "md": {
+        "tailwind": "shadow-md"
+      },
+      "lg": {
+        "tailwind": "shadow-lg",
+        "usage": "Toggle button sidebar"
+      },
+      "xl": {
+        "tailwind": "shadow-xl",
+        "usage": "Modals"
+      },
+      "2xl": {
+        "tailwind": "shadow-2xl",
+        "usage": "Hover em cards"
+      },
+      "glow": {
+        "yellow": {
+          "css": "shadow-[0_0_8px_#ffcd38]",
+          "usage": "Indicador ativo na sidebar (dark mode)"
+        }
+      }
+    },
+    "opacity": {
+      "10": "/10",
+      "20": "/20",
+      "30": "/30",
+      "40": "/40",
+      "50": "/50",
+      "60": "/60",
+      "80": "/80",
+      "90": "/90",
+      "95": "/95"
+    },
+    "transition": {
+      "default": {
+        "tailwind": "transition-all duration-200"
+      },
+      "colors": {
+        "tailwind": "transition-colors"
+      },
+      "colorsWithDuration": {
+        "tailwind": "transition-colors duration-300"
+      },
+      "slow": {
+        "tailwind": "transition-all duration-300",
+        "usage": "Sidebar, main content margin"
+      }
+    },
+    "focus": {
+      "ring": {
+        "dark": "focus:ring-2 focus:ring-brand-yellow/20 focus:border-brand-yellow/50",
+        "light": "focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500/50"
+      },
+      "outline": "focus:outline-none"
+    }
+  },
+  "breakpoints": {
+    "sm": {
+      "value": "640px",
+      "tailwind": "sm:",
+      "usage": "Ajustes de padding, gaps, tamanhos"
+    },
+    "md": {
+      "value": "768px",
+      "tailwind": "md:",
+      "usage": "Tablets"
+    },
+    "lg": {
+      "value": "1024px",
+      "tailwind": "lg:",
+      "usage": "Sidebar collapse, table/gallery switch, desktop"
+    },
+    "xl": {
+      "value": "1280px",
+      "tailwind": "xl:",
+      "usage": "Grid 4 colunas"
+    },
+    "2xl": {
+      "value": "1536px",
+      "tailwind": "2xl:",
+      "usage": "Telas muito grandes"
+    }
+  },
+  "layout": {
+    "sidebar": {
+      "widthExpanded": {
+        "mobile": "280px",
+        "desktop": "295px",
+        "tailwind": "w-[280px] lg:w-[295px]"
+      },
+      "widthCollapsed": {
+        "value": "80px",
+        "tailwind": "lg:w-20"
+      },
+      "headerHeight": {
+        "value": "80px",
+        "tailwind": "h-20"
+      }
+    },
+    "header": {
+      "heightMobile": {
+        "value": "64px",
+        "tailwind": "h-16"
+      },
+      "heightDesktop": {
+        "value": "80px",
+        "tailwind": "lg:h-20"
+      }
+    },
+    "mainContent": {
+      "marginExpanded": {
+        "tailwind": "lg:ml-[295px]"
+      },
+      "marginCollapsed": {
+        "tailwind": "lg:ml-20"
+      }
+    },
+    "grid": {
+      "cards": {
+        "mobile": "grid-cols-1",
+        "tablet": "sm:grid-cols-2",
+        "desktop": "lg:grid-cols-3",
+        "wide": "xl:grid-cols-4"
+      },
+      "metrics": {
+        "mobile": "grid-cols-2",
+        "tablet": "sm:grid-cols-3",
+        "desktop": "lg:grid-cols-5"
+      }
+    }
+  },
+  "components": {
+    "card": {
+      "base": "rounded-xl border transition-all duration-200 backdrop-blur-md overflow-hidden",
+      "dark": "bg-dark-800/50 border-dark-700 hover:border-dark-600",
+      "light": "bg-white/80 border-gray-200 hover:border-gray-300 shadow-sm",
+      "padding": {
+        "header": "px-6 py-3",
+        "body": "px-6 py-4",
+        "footer": "px-6 py-3"
+      }
+    },
+    "button": {
+      "primary": {
+        "base": "px-4 py-2.5 text-sm font-medium rounded-lg transition-colors",
+        "style": "text-dark-900 bg-brand-yellow hover:bg-brand-yellow/90"
+      },
+      "secondary": {
+        "base": "px-4 py-2.5 text-sm font-medium rounded-lg border transition-colors",
+        "dark": "bg-dark-700/50 border-dark-600 text-gray-400 hover:text-white hover:bg-dark-700",
+        "light": "bg-gray-100 border-gray-200 text-gray-600 hover:text-gray-900 hover:bg-gray-200"
+      },
+      "ghost": {
+        "dark": "text-gray-400 hover:bg-dark-700 hover:text-white",
+        "light": "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+      },
+      "danger": {
+        "dark": "text-gray-400 hover:bg-red-500/10 hover:text-red-500",
+        "light": "text-gray-500 hover:bg-red-50 hover:text-red-600"
+      },
+      "icon": {
+        "size": "p-2 sm:p-2.5",
+        "rounded": "rounded-lg"
+      }
+    },
+    "input": {
+      "base": "w-full border rounded-lg px-3 py-2 text-sm outline-none transition-all",
+      "dark": {
+        "default": "bg-dark-800/50 border-dark-600/50 text-white placeholder-gray-500",
+        "hover": "hover:border-dark-500 hover:bg-dark-800",
+        "focus": "focus:border-brand-yellow/50 focus:ring-2 focus:ring-brand-yellow/20"
+      },
+      "light": {
+        "default": "bg-white border-gray-300 text-gray-900 placeholder-gray-400",
+        "hover": "hover:border-gray-400",
+        "focus": "focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20"
+      }
+    },
+    "select": {
+      "base": "appearance-none cursor-pointer",
+      "icon": "absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none"
+    },
+    "badge": {
+      "base": "inline-flex items-center px-2.5 py-1 rounded-md text-[9px] font-bold uppercase tracking-wide border",
+      "active": "border-green-500/40 text-green-400 bg-green-500/10",
+      "paused": "border-orange-500/40 text-orange-400 bg-orange-500/10",
+      "inactive": "border-red-500/40 text-red-400 bg-red-500/10",
+      "processing": "border-purple-500/40 text-purple-400 bg-purple-500/10"
+    },
+    "avatar": {
+      "sizes": {
+        "sm": "w-7 h-7",
+        "md": "w-8 h-8 sm:w-9 sm:h-9",
+        "lg": "w-[52px] h-[52px]"
+      },
+      "style": "rounded-full object-cover",
+      "ring": {
+        "dark": "p-[2px] bg-dark-600/80",
+        "light": "p-[2px] bg-gray-100"
+      },
+      "border": {
+        "dark": "border-2 border-dark-600",
+        "light": "border-2 border-gray-300"
+      }
+    },
+    "table": {
+      "container": {
+        "base": "border rounded-xl overflow-hidden",
+        "dark": "bg-dark-900 border-dark-700",
+        "light": "bg-white border-gray-200 shadow-sm"
+      },
+      "header": {
+        "dark": "bg-dark-800/50 border-b border-dark-700",
+        "light": "bg-gray-50 border-b border-gray-200"
+      },
+      "headerCell": "px-6 py-3 text-xs font-medium uppercase tracking-wider",
+      "row": {
+        "dark": "border-b border-dark-700/50 hover:bg-dark-800/30",
+        "light": "border-b border-gray-100 hover:bg-gray-50"
+      },
+      "cell": "px-6 py-4"
+    },
+    "tabs": {
+      "container": {
+        "base": "rounded-lg p-1 flex items-center",
+        "dark": "bg-dark-800",
+        "light": "bg-gray-100"
+      },
+      "tab": {
+        "base": "px-3 py-1.5 text-sm font-medium rounded-md transition-all",
+        "active": "bg-brand-yellow text-dark-900 shadow-sm",
+        "inactive": {
+          "dark": "text-gray-400 hover:text-white",
+          "light": "text-gray-600 hover:text-gray-900"
+        }
+      }
+    },
+    "modal": {
+      "overlay": "fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50",
+      "container": {
+        "base": "border rounded-xl p-6 w-full max-w-sm",
+        "dark": "bg-dark-800 border-dark-700",
+        "light": "bg-white border-gray-200 shadow-xl"
+      }
+    },
+    "pagination": {
+      "container": "flex items-center gap-2",
+      "button": {
+        "base": "p-2 rounded-lg border transition-colors",
+        "dark": "border-dark-700 hover:bg-dark-800 disabled:opacity-50",
+        "light": "border-gray-200 hover:bg-gray-50 disabled:opacity-50"
+      },
+      "info": "text-sm text-gray-500"
+    }
+  },
+  "scrollbar": {
+    "width": "8px",
+    "height": "8px",
+    "dark": {
+      "track": "#18181b",
+      "thumb": "#27272a",
+      "thumbHover": "#3f3f46"
+    },
+    "light": {
+      "track": "#f3f4f6",
+      "thumb": "#d1d5db",
+      "thumbHover": "#9ca3af"
+    },
+    "borderRadius": "4px"
+  },
+  "selection": {
+    "background": "bg-brand-yellow",
+    "text": "text-dark-900",
+    "tailwind": "selection:bg-brand-yellow selection:text-dark-900"
+  },
+  "zIndex": {
+    "base": "z-0",
+    "dropdown": "z-10",
+    "sticky": "z-20",
+    "fixed": "z-30",
+    "header": "z-40",
+    "sidebar": "z-50",
+    "modal": "z-50",
+    "tooltip": "z-60"
+  },
+  "animation": {
+    "spin": "animate-spin",
+    "pulse": "animate-pulse",
+    "transitions": {
+      "fast": "duration-150",
+      "default": "duration-200",
+      "slow": "duration-300"
+    }
+  },
+  "icons": {
+    "library": "lucide-react",
+    "sizes": {
+      "xs": "w-3 h-3",
+      "sm": "w-4 h-4",
+      "md": "w-5 h-5",
+      "lg": "w-6 h-6",
+      "xl": "w-8 h-8"
+    },
+    "strokeWidth": {
+      "thin": 1,
+      "default": 1.5,
+      "medium": 2
+    }
+  }
+}
